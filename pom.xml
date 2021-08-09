@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>world.micks.lanyardapi</groupId>
+	<artifactId>Lanyard4J</artifactId>
+	<version>0.1</version>
+	<name>Lanyard4J</name>
+	<description>A simple library to get information about a Lanyard API user.</description>
+	<url>https://github.com/iDevMC/Lanyard4J</url>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>11</release>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>world.micks.lanyardapi.LanyardAPI</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20150729</version>
+		</dependency>
+
+	</dependencies>
+
+	<organization>
+		<name>Mick's World</name>
+		<url>https://micks.world</url>
+	</organization>
+
+	<scm>
+		<connection>scm:git:git://github.com/simpligility/ossrh-demo.git</connection>
+		<developerConnection>scm:git:ssh://github.com:idevmc/lanyard4j.git</developerConnection>
+		<url>http://github.com/idevmc/Lanyard4J/tree/master</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<name>Michael Faton</name>
+			<email>mick@micks.world</email>
+			<organization>Mick's World</organization>
+			<organizationUrl>https://micks.world</organizationUrl>
+		</developer>
+	</developers>
+	
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+	
+</project>
